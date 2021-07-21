@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #ab88ff;
+      }
+      .header {
+        width: 100%;
+        height: 80px;
+      }
+      .header__img {
+        width: 200px;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      .header__menu {
+        margin-right: 30px;
+      }
+      .header__menu ul {
+        /* display: none; */
+        list-style: none;
+        padding: 0px;
+        position: absolute;
+        width: 100px;
+        text-align: right;
+        margin: 0px 0px 0px 14px;
+      }
+      .header__menu--profile {
+        margin-right: 8px;
+        width: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <img
+        class="header__img"
+        src="./assets/logo-platzi-video-BW2.png"
+        alt="Platzi Video Logo"
+      />
+    </header>
+    <section class="login">
+      <section class="login__container">
+        <h2>Login</h2>
+        <form action="" class="login__container--form">
+          <input class="input" type="text" placeholder="Email" />
+          <input class="input" type="text" placeholder="Password" />
+          <button class="button">Login</button>
+          <div class="login__container--remember-me">
+            <label>
+              <input type="checkbox" id="cbox1" value="checkbox" />Remember me
+            </label>
+            <a href="#">I forgot my password</a>
+          </div>
+        </form>
+        <section class="login__container--social-media">
+          <div>
+            <img src="/assets/icons8-google-60.png" alt="Google icon" />Login
+            with Google
+          </div>
+          <div>
+            <img src="/assets/icons8-twitter-60.png" alt="Google icon" />Login
+            with Twitter
+          </div>
+        </section>
+        <p class="login__container--register">
+          If you don't have an account, <a href="#">register</a>
+        </p>
+      </section>
+    </section>
+    <footer class="footer">
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy Policies</a>
+      <a href="#">Help Support</a>
+    </footer>
+  </body>
+</html>
