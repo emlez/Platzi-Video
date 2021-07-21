@@ -5,79 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Header</title>
-    <style>
-      body {
-        margin: 0;
-        background-color: #ab88ff;
-      }
-      .header {
-        width: 100%;
-        height: 80px;
-      }
-      .header__img {
-        width: 200px;
-        margin-top: 10px;
-        margin-left: 10px;
-      }
-      .header__menu {
-        margin-right: 30px;
-      }
-      .header__menu ul {
-        /* display: none; */
-        list-style: none;
-        padding: 0px;
-        position: absolute;
-        width: 100px;
-        text-align: right;
-        margin: 0px 0px 0px 14px;
-      }
-      .header__menu--profile {
-        margin-right: 8px;
-        width: 40px;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./login-styles.css" />
   </head>
   <body>
     <header class="header">
       <img
         class="header__img"
-        src="./assets/logo-platzi-video-BW2.png"
+        src="../assets/logo-platzi-video-BW2.png"
         alt="Platzi Video Logo"
       />
     </header>
     <section class="login">
       <section class="login__container">
-        <h2>Login</h2>
+        <div class="title-container">
+          <figure>
+            <img
+              src="https://static.platzi.com/ui/assets/image/isotipoPlatzi442ccc1186a9806e18c9889cc301ffe1.png"
+              alt="Platzi Isotype"
+              height="30"
+            />
+          </figure>
+          <h2 class="title-container__title">Log In</h2>
+        </div>
         <form action="" class="login__container--form">
           <input class="input" type="text" placeholder="Email" />
           <input class="input" type="text" placeholder="Password" />
-          <button class="button">Login</button>
+          <button class="button">LOG IN</button>
           <div class="login__container--remember-me">
             <label>
-              <input type="checkbox" id="cbox1" value="checkbox" />Remember me
+              <input type="checkbox" id="cbox1" value="checkbox" /> Remember me
             </label>
             <a href="#">I forgot my password</a>
           </div>
         </form>
         <section class="login__container--social-media">
           <div>
-            <img src="/assets/icons8-google-60.png" alt="Google icon" />Login
-            with Google
+            <img src="/assets/icons8-google-60.png" alt="Google icon" />
+            <a href="#"> Sign In with Google </a>
           </div>
           <div>
-            <img src="/assets/icons8-twitter-60.png" alt="Google icon" />Login
-            with Twitter
+            <img src="/assets/icons8-twitter-60.png" alt="Google icon" />
+            <a href="#"> Sign In with Twitter </a>
           </div>
         </section>
         <p class="login__container--register">
-          If you don't have an account, <a href="#">register</a>
+          Don't have an account?<a href="#">Sign Up</a>
         </p>
       </section>
     </section>
     <footer class="footer">
-      <a href="#">Terms of Use</a>
-      <a href="#">Privacy Policies</a>
-      <a href="#">Help Support</a>
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+      <a href="#">Support</a>
     </footer>
   </body>
 </html>
