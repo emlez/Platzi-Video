@@ -7,27 +7,44 @@ html {
   font-size: 62.5%;
 }
 body {
-  background-color: #121f3d;
-  font-family: "Mulish", sans-serif;
+  background-color: #0c1633;
+  font-family: Roboto, sans-serif;
   font-size: 1.6rem;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDAiIGhlaWdodD0iMjQwIiBzdHlsZT0ib3ZlcmZsb3c6dmlzaWJsZTtlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI0MCAyNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGQ9Im0yMjguNzQgMTQ3LjE4LTgxLjU1IDgxLjU2Yy0xNS4wMSAxNS4wMi0zOS4zNiAxNS4wMi01NC4zNyAwbC04MS41NS04MS41NmMtMTUuMDEtMTUuMDItMTUuMDEtMzkuMzYgMC01NC4zN2w4MS41NS04MS41NWMxNS4wMS0xNS4wMSAzOS4zNi0xNS4wMSA1NC4zNyAwbDgxLjU1IDgxLjU1YzE1LjAxIDE1LjAyIDE1LjAxIDM5LjM2IDAgNTQuMzciIHN0eWxlPSJmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtmaWxsOiMwNzkxZTYiLz48L3N2Zz4=)
+    #0c1633;
+  background-position: -165%;
+  background-repeat: no-repeat;
+  background-size: 130%;
 }
 .header {
-  background-color: #121f3d;
-  /* -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 25%); */
+  background-color: #03091e;
   display: flex;
+  align-items: center;
   height: 8rem;
   justify-content: space-between;
   padding: 1rem;
   width: 100%;
 }
 .header__img {
-  left: 0;
+  padding-left: 1.2rem;
   width: 20rem;
 }
 .header__menu {
   align-items: center;
-  margin-right: 3rem;
+  margin-right: 1.2rem;
   text-align: right;
+  transition: 350ms all;
+  padding-right: 1.2rem;
+}
+.header__menu:hover {
+  align-self: flex-start;
+  background-color: #33b1ff;
+  border: none;
+  border-radius: 8px;
+  color: #03091e;
+  cursor: pointer;
+  font-size: 1.6rem;
+  padding: 1rem 1.2rem;
 }
 .header__menu--profile {
   align-items: center;
@@ -42,7 +59,7 @@ ul:hover {
   display: block;
 }
 .header__menu li {
-  margin: 1rem 0rem;
+  margin: 1rem 0 1.5rem 0;
 }
 .header__menu li a {
   color: #fff;
@@ -59,7 +76,7 @@ ul:hover {
   color: #fff;
 }
 .main {
-  height: 300px;
+  height: 30rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,7 +85,7 @@ ul:hover {
 .main__title {
   color: #fff;
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 .input {
   background-color: rgba(255, 255, 255, 0.1);
@@ -77,40 +94,46 @@ ul:hover {
   color: #fff;
   font-family: "Mulish", sans-serif;
   font-size: 1.6rem;
-  height: 50px;
+  height: 5rem;
   outline: none;
-  padding: 0px 20px;
+  padding: 0 2rem;
   width: 70%;
 }
 ::placeholder {
   color: white;
 }
+.categories__title {
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  padding-left: 3rem;
+  width: 100%;
+}
 .carousel {
   width: 100%;
   overflow: scroll;
-  padding: 30px;
+  padding: 3rem;
   position: relative;
 }
 .carousel__container {
   white-space: nowrap;
-  margin: 70px 0;
-  padding-bottom: 10px;
+  margin: 7rem 0;
 }
 .carousel-item {
   background-color: #24385b;
-  border-radius: 20px;
+  border-radius: 2rem;
   cursor: pointer;
   display: inline-block;
-  height: 250px;
-  margin-right: 10px;
+  height: 25rem;
+  margin-right: 1rem;
   overflow: hidden;
   position: relative;
   transition: 450ms all;
   transform-origin: center left;
-  width: 200px;
+  width: 25rem;
 }
 .carousel-item:hover ~ .carousel-item {
-  transform: translate3d(100px, 0, 0);
+  transform: translate3d(12.5rem, 0, 0);
 }
 .carousel__container:hover .carousel-item {
   opacity: 0.3;
@@ -120,9 +143,10 @@ ul:hover {
   opacity: 1;
 }
 .carousel-item__img {
-  height: 250px;
-  width: 200px;
+  height: 25rem;
+  width: 25rem;
   object-fit: cover;
+  object-position: 5% 100%;
 }
 .carousel-item__details {
   background: linear-gradient(
@@ -130,13 +154,44 @@ ul:hover {
     rgba(0, 0, 0, 0.9) 0%,
     rgba(0, 0, 0, 0) 100%
   );
+  color: #eff3f8;
   font-size: 1rem;
   opacity: 0;
   transition: 450ms opacity;
-  padding: 10px;
+  padding: 1rem;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.carousel-item__details img {
+  height: 3.5rem;
+}
+.carousel-item__details:hover {
+  opacity: 1;
+}
+.footer {
+  background-color: #03091e;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 10rem;
+  width: 100%;
+}
+.footer a {
+  color: #eff3f8;
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: 0 2rem;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+::-webkit-scrollbar {
+  display: none;
 }

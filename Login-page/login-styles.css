@@ -28,15 +28,6 @@ body {
   left: 0;
   width: 20rem;
 }
-.header__menu {
-  align-items: center;
-  margin-right: 3rem;
-  text-align: right;
-}
-.header__menu--profile {
-  align-items: center;
-  display: flex;
-}
 .login {
   display: flex;
   align-items: center;
@@ -166,4 +157,21 @@ body {
 }
 .footer a:hover {
   text-decoration: underline;
+}
+@media only screen and (max-width: 600px) {
+  /* body {
+    background-color: #24385b;
+  } */
+  .header {
+    justify-content: center;
+  }
+  .login__container {
+    /* padding: 2rem; */
+    width: 450px;
+  }
+  .footer {
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
