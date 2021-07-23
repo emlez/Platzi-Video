@@ -7,20 +7,21 @@ html {
   font-size: 62.5%;
 }
 body {
-  background-color: #0c1633;
+  background-color: #121f3d;
   font-family: Roboto, sans-serif;
   font-size: 1.6rem;
   background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDAiIGhlaWdodD0iMjQwIiBzdHlsZT0ib3ZlcmZsb3c6dmlzaWJsZTtlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI0MCAyNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGQ9Im0yMjguNzQgMTQ3LjE4LTgxLjU1IDgxLjU2Yy0xNS4wMSAxNS4wMi0zOS4zNiAxNS4wMi01NC4zNyAwbC04MS41NS04MS41NmMtMTUuMDEtMTUuMDItMTUuMDEtMzkuMzYgMC01NC4zN2w4MS41NS04MS41NWMxNS4wMS0xNS4wMSAzOS4zNi0xNS4wMSA1NC4zNyAwbDgxLjU1IDgxLjU1YzE1LjAxIDE1LjAyIDE1LjAxIDM5LjM2IDAgNTQuMzciIHN0eWxlPSJmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtmaWxsOiMwNzkxZTYiLz48L3N2Zz4=)
     #0c1633;
-  background-position: -165%;
+  background-position: -200%;
   background-repeat: no-repeat;
   background-size: 130%;
+  color: #eff3f8;
 }
 .header {
   background-color: #03091e;
   display: flex;
   align-items: center;
-  height: 8rem;
+  height: 10vh;
   justify-content: space-between;
   padding: 1rem;
   width: 100%;
@@ -62,7 +63,7 @@ ul:hover {
   margin: 1rem 0 1.5rem 0;
 }
 .header__menu li a {
-  color: #fff;
+  color: #eff3f8;
   text-decoration: none;
 }
 .header__menu li a:hover {
@@ -73,113 +74,48 @@ ul:hover {
   width: 4rem;
 }
 .header__menu--profile p {
-  color: #fff;
-}
-.main {
-  height: 45vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.main__title {
-  color: #fff;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-.input {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid #fff;
-  border-radius: 25px;
-  color: #fff;
-  font-family: "Mulish", sans-serif;
-  font-size: 1.6rem;
-  height: 5rem;
-  outline: none;
-  padding: 0 2rem;
-  width: 70%;
-}
-::placeholder {
-  color: white;
-}
-.categories__title {
-  color: #fff;
-  font-size: 2rem;
-  position: absolute;
-  padding-left: 3rem;
-  width: 100%;
-}
-.carousel {
-  width: 100%;
-  overflow: scroll;
-  padding: 3rem;
-  position: relative;
-}
-.carousel__container {
-  white-space: nowrap;
-  margin: 7rem 0;
-}
-.carousel-item {
-  background-color: #24385b;
-  border-radius: 2rem;
-  cursor: pointer;
-  display: inline-block;
-  height: 25rem;
-  margin-right: 1rem;
-  overflow: hidden;
-  position: relative;
-  transition: 450ms all;
-  transform-origin: center left;
-  width: 25rem;
-}
-.carousel-item:hover ~ .carousel-item {
-  transform: translate3d(12.5rem, 0, 0);
-}
-.carousel__container:hover .carousel-item {
-  opacity: 0.3;
-}
-.carousel__container:hover .carousel-item:hover {
-  transform: scale(1.5);
-  opacity: 1;
-}
-.carousel-item__img {
-  height: 25rem;
-  width: 25rem;
-  object-fit: cover;
-  object-position: 5% 100%;
-}
-.carousel-item__details {
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
   color: #eff3f8;
-  font-size: 1rem;
-  opacity: 0;
-  transition: 450ms opacity;
-  padding: 1rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+}
+.not-found {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+  min-height: calc(100vh - 20vh);
 }
-.carousel-item__details img {
-  height: 3.5rem;
+.text {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #eff3f8;
+  font-size: 8.5rem;
 }
-.carousel-item__details:hover {
-  opacity: 1;
+.animated {
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.pulse {
+  animation-name: pulse;
+  animation-duration: 1s;
 }
 .footer {
   background-color: #03091e;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 10rem;
+  align-self: flex-end;
+  height: 10vh;
   width: 100%;
 }
 .footer a {
@@ -191,7 +127,4 @@ ul:hover {
 }
 .footer a:hover {
   text-decoration: underline;
-}
-::-webkit-scrollbar {
-  display: none;
 }
